@@ -4,7 +4,7 @@ git --work-tree="${DIR}/htdocs" --git-dir="${DIR}/audiophile.git" checkout -f
 
 export PATH=/var/www/vhosts/audiophile/.nvm/versions/node/v16.6.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
-cd "${DIR}/htdocs/audiophile"
+cd "${DIR}/htdocs"
 /var/www/vhosts/audiophile/.nvm/versions/node/v16.6.2/bin/npm run build
 
 systemctl --user daemon-reload
