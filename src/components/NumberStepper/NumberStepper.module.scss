@@ -1,0 +1,47 @@
+@use '../../scss/abstracts/mixins';
+
+.container {
+  @include mixins.transition(border-color);
+
+  background-color: var(--clr-neutral-94);
+  border: 0.1rem solid var(--stepper-border-color, transparent);
+  display: inline-flex;
+  max-width: 12rem;
+
+  &:not(.error):focus-within {
+    --stepper-border-color: var(--clr-primary-able);
+  }
+
+  button {
+    @include mixins.transition(color);
+
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+    min-width: 4rem;
+
+    &:focus,
+    &:hover {
+      color: var(--clr-primary-able);
+    }
+  }
+
+  input {
+    background-color: inherit;
+    border: unset;
+    font-size: 1.3rem;
+    height: 100%;
+    min-height: 4.8rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.error {
+  --stepper-border-color: var(--clr-alert-danger);
+
+  input {
+    color: var(--clr-alert-danger);
+  }
+}

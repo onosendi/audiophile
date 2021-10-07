@@ -1,0 +1,161 @@
+@use '../../scss/abstracts/mixins';
+
+.appBarWrapper {
+  background-color: var(--clr-neutral-0);
+}
+
+.containerWrapper {
+  background-color: var(--clr-neutral-100);
+}
+
+.pageHeader {
+  @include mixins.type(4);
+
+  align-items: center;
+  background-color: var(--clr-neutral-0);
+  color: var(--clr-neutral-100);
+  display: flex;
+  justify-content: center;
+  min-height: 10.2rem;
+
+  @include mixins.respond-to(md) {
+    @include mixins.type(2);
+
+    min-height: 24.6rem;
+  }
+
+  @include mixins.respond-to(lg) {
+    min-height: 23.9rem;
+  }
+}
+
+.productWrapper {
+  padding-bottom: 12rem;
+  padding-top: 6.4rem;
+
+  @include mixins.respond-to(md) {
+    padding-bottom: 12.4rem;
+    padding-top: 12rem;
+  }
+
+  @include mixins.respond-to(lg) {
+    padding-bottom: 17.3rem;
+    padding-top: 16rem;
+  }
+}
+
+.product {
+  $base: &;
+
+  @include mixins.respond-to(lg) {
+    align-items: center;
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    &:nth-child(even) {
+      & > * {
+        grid-row: 1;
+      }
+
+      #{$base}ImageWrapper {
+        grid-column: 2 / span 1;
+      }
+
+      #{$base}ContentWrapper {
+        grid-column: 1 / span 1;
+
+        p {
+          max-width: 44.5rem;
+        }
+      }
+    }
+
+    &:nth-child(odd) &ContentWrapper {
+      padding-left: 9.5rem;
+    }
+  }
+
+  & + & {
+    margin-top: 12rem;
+
+    @include mixins.respond-to(lg) {
+      margin-top: 16rem;
+    }
+  }
+
+  &ImageWrapper {
+    margin-bottom: 3.2rem;
+
+    @include mixins.respond-to(md) {
+      margin-bottom: 5.2rem;
+    }
+
+    @include mixins.respond-to(lg) {
+      margin-bottom: unset;
+    }
+
+    img {
+      max-height: 35.2rem;
+
+      @include mixins.respond-to(lg) {
+        max-height: 56rem;
+      }
+    }
+  }
+
+  &ContentWrapper {
+    text-align: center;
+
+    @include mixins.respond-to(lg) {
+      text-align: left;
+    }
+
+    & > * {
+      margin-left: auto;
+      margin-right: auto;
+
+      @include mixins.respond-to(lg) {
+        margin-left: unset;
+        margin-right: unset;
+      }
+    }
+
+    & > h2 {
+      letter-spacing: 0.1rem;
+      margin-bottom: 2.4rem;
+      max-width: 32.7rem;
+
+      @include mixins.respond-to(md) {
+        font-size: 4rem;
+        letter-spacing: 0.143rem;
+        line-height: 4.4rem;
+        margin-bottom: 3.2rem;
+        max-width: 34rem;
+      }
+    }
+
+    & > p {
+      color: var(--clr-neutral-49);
+      margin-bottom: 2.4rem;
+      max-width: 40rem;
+
+      @include mixins.respond-to(md) {
+        max-width: 60rem;
+      }
+
+      @include mixins.respond-to(lg) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}
+
+.cardNav {
+  background-color: var(--clr-neutral-100);
+  padding-bottom: 12rem;
+
+  @include mixins.respond-to(lg) {
+    padding-bottom: 16rem;
+  }
+}

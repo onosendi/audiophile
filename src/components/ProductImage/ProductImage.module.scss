@@ -1,0 +1,20 @@
+@use '../../scss/abstracts/mixins';
+
+.productImage {
+  @include mixins.transition(border-color);
+
+  align-items: center;
+  background-color: var(--clr-neutral-94);
+  border: 0.1rem solid transparent;
+  border-radius: var(--root-border-radius);
+  display: flex;
+  justify-content: center;
+
+  &:focus {
+    border-color: var(--clr-primary-ambitious);
+  }
+
+  img {
+    border-radius: var(--root-border-radius);
+  }
+}

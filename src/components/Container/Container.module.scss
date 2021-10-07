@@ -1,0 +1,22 @@
+@use '../../scss/abstracts/mixins';
+
+.wrapper {
+  --container-wrapper-padding: 2.4rem;
+
+  padding-left: var(--container-wrapper-padding);
+  padding-right: var(--container-wrapper-padding);
+
+  @include mixins.respond-to(md) {
+    --container-wrapper-padding: 3.9rem;
+  }
+
+  @include mixins.respond-to(lg) {
+    --container-wrapper-padding: 3.9rem;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 111rem;
+}

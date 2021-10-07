@@ -1,0 +1,17 @@
+@use '../../scss/abstracts/mixins';
+
+.wrapper {
+  display: grid;
+  grid-gap: 1.6rem;
+  grid-template-columns: auto 1fr;
+  justify-items: start;
+  margin-top: 3.1rem;
+
+  @include mixins.respond-to(lg) {
+    margin-top: 4.7rem;
+  }
+}
+
+.toast {
+  @include mixins.type(body);
+}

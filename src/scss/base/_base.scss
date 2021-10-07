@@ -1,0 +1,28 @@
+@use '../abstracts/mixins';
+
+body {
+  background-color: var(--clr-neutral-6);
+  color: var(--clr-neutral-0);
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+.sr-only,
+[aria-hidden="true"] {
+  @include mixins.sr-only();
+}
+
+:focus {
+  outline: unset;
+}
+
+::selection {
+  background-color: var(--clr-primary-able);
+  color: var(--clr-neutral-100);
+}
+
+// * {
+//   outline: 1px solid red;
+// }

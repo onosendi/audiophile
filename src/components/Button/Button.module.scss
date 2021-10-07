@@ -1,0 +1,52 @@
+@use '../../scss/abstracts/mixins';
+
+.button {
+  @include mixins.transition((background-color, color));
+
+  align-items: center;
+  background-color: var(--button-background-color, transparent);
+  border: 0.1rem solid var(--button-border-color, transparent);
+  color: var(--button-color, inherit);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 4.8rem;
+  padding: 0 3.1rem;
+  position: relative;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    background-color: var(--button-background-hover-color, transparent);
+    color: var(--button-hover-color, inherit);
+  }
+
+  &[disabled] {
+    opacity: 0.25;
+    pointer-events: none;
+  }
+}
+
+.variant1 {
+  --button-background-color: var(--clr-primary-able);
+  --button-background-hover-color: var(--clr-primary-ambitious);
+  --button-color: var(--clr-neutral-100);
+  --button-hover-color: var(--clr-neutral-100);
+}
+
+.variant2 {
+  --button-background-hover-color: var(--clr-neutral-0);
+  --button-border-color: var(--clr-neutral-0);
+  --button-color: var(--clr-neutral-0);
+  --button-hover-color: var(--clr-neutral-100);
+}
+
+.variant3 {
+  --button-background-color: var(--clr-neutral-0);
+  --button-background-hover-color: var(--clr-neutral-29);
+  --button-color: var(--clr-neutral-100);
+}
+
+.expand {
+  width: 100%;
+}

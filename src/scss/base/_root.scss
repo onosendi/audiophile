@@ -1,0 +1,16 @@
+@use '../abstracts/palette';
+
+:root {
+  --root-border-radius: 0.8rem;
+
+  @each $color, $shades in palette.$palette {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @for $n from 0 through 100 {
+    $calculated: $n * 1%;
+    --clr-neutral-#{$n}: hsl(0, 0%, #{$calculated});
+  }
+}

@@ -1,0 +1,11 @@
+@use '../../scss/abstracts/mixins';
+
+.newProduct {
+  color: var(--clr-primary-able);
+  display: inline-block;
+  margin-bottom: 2.4rem;
+
+  @include mixins.respond-to(md) {
+    margin-bottom: 1.6rem;
+  }
+}

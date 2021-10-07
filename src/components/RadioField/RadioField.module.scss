@@ -1,0 +1,48 @@
+@use '../../scss/abstracts/mixins';
+
+.label {
+  @include mixins.transition(border-color);
+
+  --radiofield-border-color: var(--clr-neutral-81);
+
+  align-items: center;
+  border: 1px solid var(--radiofield-border-color);
+  border-radius: var(--root-border-radius);
+  cursor: pointer;
+  display: flex;
+  min-height: 5.6rem;
+  padding: 0 1.7em;
+  position: relative;
+  width: 100%;
+
+  &:hover,
+  &:focus-within {
+    --radiofield-border-color: var(--clr-primary-able);
+  }
+}
+
+.input {
+  left: -9999px;
+  opacity: 0;
+  position: absolute;
+
+  &:checked + .checkmark {
+    background-color: var(--clr-primary-able);
+  }
+}
+
+.checkmark {
+  @include mixins.transition(background-color);
+
+  --radiofield-checkmark-size: 1.1rem;
+
+  background-color: var(--clr-neutral-100);
+  box-shadow:
+    0 0 0 0.5rem var(--clr-neutral-100),
+    0 0 0 0.6rem var(--clr-neutral-81);
+  border-radius: 50%;
+  cursor: pointer;
+  height: var(--radiofield-checkmark-size);
+  margin-right: 1.7rem;
+  width: var(--radiofield-checkmark-size);
+}

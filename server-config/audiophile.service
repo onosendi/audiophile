@@ -1,0 +1,14 @@
+[Unit]
+Description=audiophile node server
+After=network.target
+
+[Service]
+Restart=always
+RestartSec=10
+WorkingDirectory=/var/www/vhosts/audiophile/htdocs/audiophile
+Environment=NODE_ENV=production
+Environment=PATH=/var/www/vhosts/audiophile/.nvm/versions/node/v16.6.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ExecStart=/var/www/vhosts/audiophile/.nvm/versions/node/v16.6.2/bin/npx next start -p 7000
+
+[Install]
+WantedBy=default.target

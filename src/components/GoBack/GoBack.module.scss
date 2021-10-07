@@ -1,0 +1,17 @@
+@use '../../scss/abstracts/mixins';
+
+.button {
+  @include mixins.transition(color);
+
+  background-color: unset;
+  border: unset;
+  color: var(--clr-neutral-47);
+  cursor: pointer;
+  margin: -2rem;
+  padding: 2rem;
+
+  &:focus,
+  &:hover {
+    color: var(--clr-primary-able);
+  }
+}

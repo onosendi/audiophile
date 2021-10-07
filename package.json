@@ -1,0 +1,40 @@
+{
+  "name": "audiophile",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --ext js --ext jsx ."
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.6.1",
+    "array-shuffle": "^3.0.0",
+    "axios": "^0.21.1",
+    "clsx": "^1.1.1",
+    "dotenv": "^10.0.0",
+    "express-validator": "^6.12.1",
+    "knex": "^0.95.9",
+    "next": "^11.1.0",
+    "next-connect": "^0.10.2",
+    "pg": "^8.7.1",
+    "prop-types": "^15.7.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hot-toast": "^2.1.0",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.1",
+    "redux-persist": "^6.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-next": "^11.0.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "sass": "^1.37.3"
+  }
+}

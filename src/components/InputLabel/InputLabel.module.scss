@@ -1,0 +1,17 @@
+.label {
+  display: block;
+  color: var(--clr-neutral-0);
+}
+
+.labelHelperWrapper {
+  display: flex;
+  margin-bottom: 0.9rem;
+
+  & > span:first-child {
+    flex-grow: 1;
+  }
+}
+
+.error {
+  color: var(--clr-alert-danger);
+}

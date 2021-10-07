@@ -1,0 +1,92 @@
+@use '../../scss/abstracts/mixins';
+
+.containerWrapper {
+  background-color: var(--clr-neutral-100);
+}
+
+.aside {
+  display: grid;
+  grid-gap: 4rem;
+  padding-bottom: 12rem;
+
+  @include mixins.respond-to(md) {
+    grid-gap: 6.3rem;
+    padding-bottom: 9.6rem;
+  }
+
+  @include mixins.respond-to(lg) {
+    align-items: center;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 20rem;
+  }
+}
+
+.image {
+  background-image: url(../../../public/img/shared/tablet/best-gear.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: var(--root-border-radius);
+  min-height: 30rem;
+
+  @include mixins.respond-to(lg) {
+    background-image: url(../../../public/img/shared/desktop/best-gear.jpg);
+    background-size: auto 58.8rem;
+    grid-column: 2 / span 1;
+    grid-row: 1;
+    min-height: 58.8rem;
+  }
+}
+
+.content {
+  text-align: center;
+
+  @include mixins.respond-to(lg) {
+    grid-column: 1 / span 1;
+    grid-row: 1;
+    text-align: left;
+  }
+
+  & > * {
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mixins.respond-to(lg) {
+      margin-left: unset;
+      margin-right: unset;
+    }
+  }
+
+  span {
+    display: inline-block;
+    letter-spacing: 0.1rem;
+    max-width: 42.7rem;
+
+    @include mixins.respond-to(md) {
+      @include mixins.type(2);
+
+      max-width: 57.3rem;
+    }
+
+    @include mixins.respond-to(lg) {
+      max-width: 44.5rem;
+    }
+
+    & > span {
+      color: var(--clr-primary-able);
+    }
+  }
+
+  p {
+    color: var(--clr-neutral-49);
+    margin-top: 3.2rem;
+
+    @include mixins.respond-to(md) {
+      max-width: 77.3rem;
+    }
+
+    @include mixins.respond-to(lg) {
+      max-width: 44.5rem;
+    }
+  }
+}

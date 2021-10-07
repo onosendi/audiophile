@@ -1,0 +1,72 @@
+@use '../../scss/abstracts/mixins';
+
+.wrapper {
+  @include mixins.z-index(app-bar);
+
+  position: relative;
+}
+
+.container {
+  --appbar-separator-color: transparent;
+
+  align-items: center;
+  border-bottom: 0.1rem solid var(--appbar-separator-color);
+  display: flex;
+  min-height: 9rem;
+  position: relative;
+
+  @include mixins.respond-to(lg) {
+    min-height: 9.7rem;
+  }
+}
+
+.separator {
+  --appbar-separator-color: var(--clr-neutral-18);
+}
+
+.logo {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+
+  @include mixins.respond-to(md) {
+    left: unset;
+    margin-left: 3.2rem;
+    position: relative;
+    transform: unset;
+  }
+
+  @include mixins.respond-to(lg) {
+    margin-left: unset;
+  }
+}
+
+.nav {
+  display: none;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  @include mixins.respond-to(lg) {
+    display: block;
+  }
+
+  a {
+    @include mixins.transition(color);
+
+    color: var(--primary-nav-color, var(--clr-neutral-100));
+    letter-spacing: 0.2rem;
+    line-height: 1;
+    text-decoration: none;
+
+    & + a {
+      margin-left: 3.5rem;
+    }
+
+    &:focus,
+    &:hover {
+      --primary-nav-color: var(--clr-primary-able);
+    }
+  }
+}
