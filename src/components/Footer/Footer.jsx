@@ -25,7 +25,7 @@ const Footer = () => (
       {['facebook', 'twitter', 'instagram'].map((i) => (
         <Link href="/" key={i}>
           {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-          <a aria-label={i} className={cx(styles[i])} />
+          <a aria-label={i} className={cx(styles[i], styles.socialLink)} />
         </Link>
       ))}
     </div>

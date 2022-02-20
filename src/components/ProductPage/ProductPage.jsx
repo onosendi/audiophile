@@ -85,14 +85,14 @@ const ProductPage = ({ product, recommendedProducts }) => {
               const href = `/product/${rec.slug}`;
 
               return (
-                <li key={rec.id}>
+                <li className={styles.recommendedListItem} key={rec.id}>
                   <ProductImage
                     className={cx(styles.recommendedListImage)}
                     href={href}
                     mobile={rec.mobile}
                     name={rec.name}
                   />
-                  <span className={cx('type-5')}>{rec.shortName}</span>
+                  <span className={cx('type-5', styles.shortName)}>{rec.shortName}</span>
                   <Button href={href} variant="1">see product</Button>
                 </li>
               );

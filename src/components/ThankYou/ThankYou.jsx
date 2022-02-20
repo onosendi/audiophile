@@ -71,8 +71,8 @@ const ThankYou = ({ grandTotal, items }) => {
               )}
             </div>
             <div className={cx(styles.totalWrapper)}>
-              <span className={cx('type-body')}>Grand Total</span>
-              <span className={cx('type-6')}>{currency({ number: grandTotal })}</span>
+              <span className={cx('type-body', styles.total)}>Grand Total</span>
+              <span className={cx('type-6', styles.total)}>{currency({ number: grandTotal })}</span>
             </div>
           </div>
           <Button expand href="/" variant="1">Back to home</Button>

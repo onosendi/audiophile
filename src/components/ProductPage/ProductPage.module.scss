@@ -1,4 +1,4 @@
-@use '../../scss/abstracts/mixins';
+@use "../../scss/abstracts/mixins";
 
 .appBarWrapper {
   background-color: var(--clr-neutral-0);
@@ -30,7 +30,7 @@
     align-items: center;
     display: grid;
     grid-gap: 6.9rem;
-    grid-template-columns: 41.419402085074% auto;
+    grid-template-columns: 41.4194% auto;
     margin-bottom: 12rem;
   }
 
@@ -177,7 +177,7 @@
         min-width: 3.9rem;
 
         &::after {
-          content: 'x';
+          content: "x";
         }
       }
 
@@ -194,8 +194,8 @@
   margin-bottom: 12rem;
 
   @include mixins.respond-to(md) {
-    grid-gap: 2.6086956521%;
-    grid-template-columns: 40.1449275362% 57.2463768115%;
+    grid-gap: 2.6086%;
+    grid-template-columns: 40.1449% 57.2463%;
   }
 
   @include mixins.respond-to(lg) {
@@ -285,8 +285,8 @@
       }
     }
 
-    li {
-      & > span {
+    &Item {
+      & > .shortName {
         display: block;
         margin-bottom: 3.2rem;
       }

@@ -1,4 +1,4 @@
-@use '../../scss/abstracts/mixins';
+@use "../../scss/abstracts/mixins";
 
 .input {
   @include mixins.transition((background-color, border-color));
@@ -18,10 +18,6 @@
 
   &::placeholder {
     color: var(--clr-neutral-60);
-  }
-
-  &::-webkit-input-placeholder {
-    line-height: 1.5;
   }
 
   &:not(.error):focus {

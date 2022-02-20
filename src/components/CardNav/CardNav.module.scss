@@ -1,4 +1,4 @@
-@use '../../scss/abstracts/mixins';
+@use "../../scss/abstracts/mixins";
 
 .cardNav {
   display: flex;
@@ -6,6 +6,28 @@
 
   @include mixins.respond-to(md) {
     flex-direction: row;
+  }
+}
+
+.shopText {
+  @include mixins.transition(color);
+
+  bottom: 2.6rem;
+  color: var(--clr-neutral-47);
+
+  @include mixins.respond-to(lg) {
+    bottom: 3.4rem;
+  }
+
+  & > span {
+    background-color: var(--clr-primary-able);
+    display: inline-block;
+    height: 1.2rem;
+    margin-left: 1.3rem;
+    mask: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMS4zMjIgMWw1IDUtNSA1IiBzdHJva2U9IiNEODdENEEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
+    mask: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMS4zMjIgMWw1IDUtNSA1IiBzdHJva2U9IiNEODdENEEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
+    mask-size: 100%;
+    width: 0.8rem;
   }
 }
 
@@ -22,6 +44,23 @@
     min-height: 28.4rem;
   }
 
+  &::before {
+    @include mixins.transition(background-color);
+
+    background-color: var(--clr-neutral-97);
+    border-radius: var(--root-border-radius);
+    bottom: 0;
+    content: "";
+    min-height: 16.5rem;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+    @include mixins.respond-to(lg) {
+      min-height: 20.4rem;
+    }
+  }
+
   &:focus,
   &:hover {
     &::before {
@@ -33,27 +72,10 @@
     }
   }
 
-  &::before {
-    @include mixins.transition(background-color);
-
-    background-color: var(--clr-neutral-97);
-    border-radius: var(--root-border-radius);
-    bottom: 0;
-    content: '';
-    min-height: 16.5rem;
-    left: 0;
-    position: absolute;
-    width: 100%;
-
-    @include mixins.respond-to(lg) {
-      min-height: 20.4rem;
-    }
-  }
-
   &::after {
     background-position: center 0;
     background-repeat: no-repeat;
-    content: '';
+    content: "";
     height: 100%;
     left: 0;
     position: absolute;
@@ -94,30 +116,8 @@
   }
 }
 
-.shopText {
-  @include mixins.transition(color);
-
-  bottom: 2.6rem;
-  color: var(--clr-neutral-47);
-
-  @include mixins.respond-to(lg) {
-    bottom: 3.4rem;
-  }
-
-  & > span {
-    background-color: var(--clr-primary-able);
-    display: inline-block;
-    height: 1.2rem;
-    margin-left: 1.3rem;
-    -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMS4zMjIgMWw1IDUtNSA1IiBzdHJva2U9IiNEODdENEEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+);
-    mask: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMS4zMjIgMWw1IDUtNSA1IiBzdHJva2U9IiNEODdENEEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+);
-    mask-size: 100%;
-    width: 0.8rem;
-  }
-}
-
 .headphones::after {
-  background-image: url(../../../public/media/categories/headphones.jpg);
+  background-image: url("../../../public/media/categories/headphones.jpg");
   background-size: 15rem;
 
   @include mixins.respond-to(lg) {
@@ -127,7 +127,7 @@
 }
 
 .speakers::after {
-  background-image: url(../../../public/media/categories/speakers.jpg);
+  background-image: url("../../../public/media/categories/speakers.jpg");
   background-size: 15rem;
 
   @include mixins.respond-to(lg) {
@@ -137,7 +137,7 @@
 }
 
 .earphones::after {
-  background-image: url(../../../public/media/categories/earphones.jpg);
+  background-image: url("../../../public/media/categories/earphones.jpg");
   background-size: 18rem;
 
   @include mixins.respond-to(lg) {

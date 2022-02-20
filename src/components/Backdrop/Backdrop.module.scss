@@ -1,9 +1,9 @@
-@use '../../scss/abstracts/mixins';
+@use "../../scss/abstracts/mixins";
 
 .backdrop {
   @include mixins.z-index(backdrop);
 
-  background-color: hsla(0, 0%, 0%, 0.7);
+  background-color: hsl(0deg 0% 0% / 70%);
   bottom: 0;
   left: 0;
   position: fixed;
@@ -23,6 +23,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -32,6 +33,7 @@
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }

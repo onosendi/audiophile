@@ -1,4 +1,4 @@
-@use '../abstracts/palette';
+@use "../abstracts/palette";
 
 @each $color, $shades in palette.$palette {
   @each $shade, $value in $shades {

@@ -1,29 +1,29 @@
 @font-face {
-  font-family: 'Manrope';
+  font-family: Manrope;
   font-style: normal;
   font-weight: normal;
   src:
-    local('Manrope-Regular'),
-    url(../../../public/font/Manrope-Regular.woff2) format('woff2'),
-    url(../../../public/font/Manrope-Regular.woff) format('woff');
+    local("Manrope-Regular"),
+    url("../../../public/font/Manrope-Regular.woff2") format("woff2"),
+    url("../../../public/font/Manrope-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Manrope';
+  font-family: Manrope;
   font-style: normal;
   font-weight: 500;
   src:
-    local('Manrope-Medium'),
-    url(../../../public/font/Manrope-Medium.woff2) format('woff2'),
-    url(../../../public/font/Manrope-Medium.woff) format('woff');
+    local("Manrope-Medium"),
+    url("../../../public/font/Manrope-Medium.woff2") format("woff2"),
+    url("../../../public/font/Manrope-Medium.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Manrope';
+  font-family: Manrope;
   font-style: normal;
   font-weight: 700;
   src:
-    local('Manrope-Bold'),
-    url(../../../public/font/Manrope-Bold.woff2) format('woff2'),
-    url(../../../public/font/Manrope-Bold.woff) format('woff');
+    local("Manrope-Bold"),
+    url("../../../public/font/Manrope-Bold.woff2") format("woff2"),
+    url("../../../public/font/Manrope-Bold.woff") format("woff");
 }
