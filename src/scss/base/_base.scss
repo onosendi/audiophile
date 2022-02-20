@@ -1,4 +1,4 @@
-@use '../abstracts/mixins';
+@use "../abstracts/mixins";
 
 body {
   background-color: var(--clr-neutral-6);
@@ -6,12 +6,12 @@ body {
 }
 
 input {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 .sr-only,
 [aria-hidden="true"] {
-  @include mixins.sr-only();
+  @include mixins.sr-only;
 }
 
 :focus {

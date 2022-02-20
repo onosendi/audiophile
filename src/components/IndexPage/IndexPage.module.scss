@@ -1,4 +1,4 @@
-@use '../../scss/abstracts/mixins';
+@use "../../scss/abstracts/mixins";
 
 .appBarWrapper {
   background-color: var(--clr-neutral-10);
@@ -6,7 +6,7 @@
 
 .xx99MarkIIHeadphoneWrapper {
   background-color: var(--clr-neutral-10);
-  background-image: url(../../../public/img/home/mobile/xx99-mark-ii-headphones.jpg);
+  background-image: url("../../../public/img/home/mobile/xx99-mark-ii-headphones.jpg");
   background-position: center top -1rem;
   background-repeat: no-repeat;
   background-size: 60rem;
@@ -33,7 +33,7 @@
   }
 
   @include mixins.respond-to(lg) {
-    background-image: url(../../../public/img/home/mobile/xx99-mark-ii-headphones.jpg);
+    background-image: url("../../../public/img/home/mobile/xx99-mark-ii-headphones.jpg");
     background-position: right top;
     background-repeat: no-repeat;
     background-size: 65.5rem;
@@ -119,8 +119,8 @@
 .zx9Speaker {
   background-color: var(--clr-primary-able);
   background-image:
-    url(../../../public/img/home/mobile/zx9-speaker.png),
-    url(../../../public/img/home/desktop/pattern-circles.png);
+    url("../../../public/img/home/mobile/zx9-speaker.png"),
+    url("../../../public/img/home/desktop/pattern-circles.png");
   background-position:
     center top 5.5rem,
     center top -11.8rem;
@@ -148,8 +148,8 @@
 
   @include mixins.respond-to(lg) {
     background-image:
-      url(../../../public/img/home/desktop/zx9-speaker.png),
-      url(../../../public/img/home/desktop/pattern-circles.png);
+      url("../../../public/img/home/desktop/zx9-speaker.png"),
+      url("../../../public/img/home/desktop/pattern-circles.png");
     background-position:
       left 14.1rem top 11.5rem,
       left -14.7rem top -3.6rem;
@@ -217,7 +217,7 @@
 
 .zx7Speaker {
   background-color: var(--clr-neutral-90);
-  background-image: url(../../../public/img/home/mobile/zx7-speaker.jpg);
+  background-image: url("../../../public/img/home/mobile/zx7-speaker.jpg");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: auto 32rem;
@@ -227,12 +227,12 @@
   position: relative;
 
   @include mixins.respond-to(md) {
-    background-image: url(../../../public/img/home/tablet/zx7-speaker.jpg);
+    background-image: url("../../../public/img/home/tablet/zx7-speaker.jpg");
     margin-bottom: 3.2rem;
   }
 
   @include mixins.respond-to(lg) {
-    background-image: url(../../../public/img/home/desktop/zx7-speaker.jpg);
+    background-image: url("../../../public/img/home/desktop/zx7-speaker.jpg");
     margin-bottom: 4.8rem;
   }
 
@@ -253,12 +253,6 @@
 
   a {
     margin-top: 3.2rem;
-
-    @include mixins.respond-to(md) {
-    }
-
-    @include mixins.respond-to(lg) {
-    }
   }
 }
 
@@ -288,17 +282,17 @@
   }
 
   &Image {
-    background-image: url(../../../public/img/home/mobile/yx1-earphones.jpg);
+    background-image: url("../../../public/img/home/mobile/yx1-earphones.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
     @include mixins.respond-to(md) {
-      background-image: url(../../../public/img/home/tablet/yx1-earphones.jpg);
+      background-image: url("../../../public/img/home/tablet/yx1-earphones.jpg");
     }
 
     @include mixins.respond-to(lg) {
-      background-image: url(../../../public/img/home/desktop/yx1-earphones.jpg);
+      background-image: url("../../../public/img/home/desktop/yx1-earphones.jpg");
     }
   }
 

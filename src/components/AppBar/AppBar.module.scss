@@ -1,4 +1,4 @@
-@use '../../scss/abstracts/mixins';
+@use "../../scss/abstracts/mixins";
 
 .wrapper {
   @include mixins.z-index(app-bar);

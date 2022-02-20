@@ -1,4 +1,4 @@
-@use '../../scss/abstracts/mixins';
+@use "../../scss/abstracts/mixins";
 
 .container {
   @include mixins.transition(border-color);

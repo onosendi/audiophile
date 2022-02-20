@@ -1,4 +1,4 @@
-@use '../../scss/abstracts/mixins';
+@use "../../scss/abstracts/mixins";
 
 .label {
   @include mixins.transition(border-color);
@@ -21,16 +21,6 @@
   }
 }
 
-.input {
-  left: -9999px;
-  opacity: 0;
-  position: absolute;
-
-  &:checked + .checkmark {
-    background-color: var(--clr-primary-able);
-  }
-}
-
 .checkmark {
   @include mixins.transition(background-color);
 
@@ -45,4 +35,14 @@
   height: var(--radiofield-checkmark-size);
   margin-right: 1.7rem;
   width: var(--radiofield-checkmark-size);
+}
+
+.input {
+  left: -9999px;
+  opacity: 0;
+  position: absolute;
+
+  &:checked + .checkmark {
+    background-color: var(--clr-primary-able);
+  }
 }

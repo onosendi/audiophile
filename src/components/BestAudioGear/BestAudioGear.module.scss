@@ -1,4 +1,4 @@
-@use '../../scss/abstracts/mixins';
+@use "../../scss/abstracts/mixins";
 
 .containerWrapper {
   background-color: var(--clr-neutral-100);
@@ -23,14 +23,14 @@
 }
 
 .image {
-  background-image: url(../../../public/img/shared/tablet/best-gear.jpg);
+  background-image: url("../../../public/img/shared/tablet/best-gear.jpg");
   background-position: center;
   background-size: cover;
   border-radius: var(--root-border-radius);
   min-height: 30rem;
 
   @include mixins.respond-to(lg) {
-    background-image: url(../../../public/img/shared/desktop/best-gear.jpg);
+    background-image: url("../../../public/img/shared/desktop/best-gear.jpg");
     background-size: auto 58.8rem;
     grid-column: 2 / span 1;
     grid-row: 1;
